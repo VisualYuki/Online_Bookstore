@@ -42,9 +42,9 @@ body {
   border: none;
 }
 
-nav {
+/* nav {
   text-align: center;
-}
+} */
 
 a {
   text-decoration-line: none;
@@ -53,6 +53,7 @@ a {
 
 li {
   cursor: pointer;
+  list-style: none;
 }
 
 /*============================================
@@ -87,6 +88,8 @@ li {
 }
 
 .additional-info-list > li:last-child {
+  padding: 5px;
+
   background: #e5efff;
   border-radius: 10px;
 }
@@ -151,6 +154,8 @@ li {
 
   border-bottom: 1px rgb(230, 231, 235) solid;
   border-top: 1px rgb(230, 231, 235) solid;
+
+  /* background-color: #000000; */
 }
 
 .top-header-up .container {
@@ -163,10 +168,11 @@ li {
   width: 150px;
   height: 70px;
 
-  background-image: url("../image/123.jpg");
+  background-image: url("../image/Logo2-empty.jpg");
+  /* background-image: url("../image/Logo1-empty.jpg"); */
+
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: turquoise;
 
   /*background-size: 70px 150px; */
 }
@@ -312,8 +318,8 @@ li {
 
   display: block;
 
-  font-size: 15px;
-  font-weight: 900;
+  font-size: 13px;
+  font-weight: 700;
   line-height: 18px;
 
   /* color: rgb(0, 26, 52); */
@@ -375,47 +381,190 @@ li {
 
 .top-header-down {
   padding: 0px 200px;
-
+  height: 40px;
   background-color: white;
   border-bottom: 1px solid rgb(230, 231, 235);
 
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
-  font-family: Open Sans, system-ui, Arial, sans-serif;
+
+  /* font-family: Open Sans, system-ui, Arial, sans-serif; */
 }
 
+nav {
+  height: inherit;
+}
 /*----------------------------*\
   main-menu
 \*----------------------------*/
 
+.main-menu {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
 .main-menu > li {
   position: relative;
 
-  display: inline-block;
   padding: 0 15px;
-  height: 50px;
-
-  /* cursor: pointer; */
+  height: inherit;
 }
 
-.main-menu > li:hover {
-  background-color: #fff2c7;
+.main-menu > li:first-child {
+  padding-left: 7px;
+}
+
+.angle-down:after {
+  content: "\f107";
+
+  position: absolute;
+  top: 50%;
+  left: 90%;
+
+  font-family: FontAwesome;
+
+  transform: translate(0, -50%);
+
+  transition-duration: 0.1s;
+}
+
+.main-menu li:hover a {
+  color: #004ed6;
+}
+
+.main-menu li:hover:after {
+  color: red;
+
+  transition-duration: 0.1s;
+  transform: rotate(180deg) translate(0, 50%);
 }
 
 .main-menu a {
   position: relative;
-  top: 30%;
+  top: 50%;
+  left: 50%;
 
   display: block;
 
+  font-size: 14px !important;
+  /* font-family: DisplayPro, Arial, sans-serif !important; */
+
   color: rgb(54, 54, 54);
+
+  transform: translate(-50%, -50%);
+
+  cursor: pointer;
 }
 
 /*----------------------------*\
-  submenu 
+      style of certain submenu
 \*----------------------------*/
 
-.submenu-link:after {
+.catalogue:after {
+  left: 4px !important;
+}
+
+.toys {
+}
+
+/*----------------------------*\
+  submenu
+\*----------------------------*/
+
+.main-menu > li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+  background-color: rgb(255, 255, 255);
+  top: 39px;
+  transition-duration: 0.3s;
+}
+
+.submenu {
+  position: absolute;
+  top: 140%;
+  left: 0;
+  z-index: 1;
+
+  padding-left: 0;
+  width: 300px;
+
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgb(184, 184, 184);
+  color: rgb(54, 54, 54);
+  /* box-shadow: -1px -1px 3px rgb(233, 233, 233), 1px 1px 3px gray; */
+  box-shadow: 0 0 4px 1px gray;
+}
+
+.submenu:after {
+  content: "";
+
+  position: absolute;
+  left: 13px;
+  top: -9px;
+
+  display: block;
+  width: 0px;
+  height: 0px;
+
+  border-bottom: 8px solid gray;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.submenu li {
+  position: relative;
+  display: block;
+
+  height: 50px;
+  padding-left: 15px;
+
+  border-bottom: 1px solid #ededed;
+}
+
+.submenu li a {
+  position: relative !important;
+  left: 0px !important;
+  top: 0px !important;
+
+  display: inline;
+  line-height: 50px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  color: rgb(0, 26, 52) !important;
+}
+
+.submenu li:hover {
+  background-color: rgba(73, 92, 145, 0.07);
+}
+
+.submenu li:hover a {
+  color: rgb(61, 112, 178) !important;
+}
+
+.submenu li:hover:after {
+  color: red !important;
+}
+.angle-right:after {
+  content: "\f105";
+
+  position: absolute;
+  top: 50%;
+  left: 95%;
+
+  font-family: FontAwesome;
+
+  transform: translate(0, -50%);
+}
+
+/* .submenu-link:after {
   position: relative;
   left: 5px;
   content: "";
@@ -429,80 +578,33 @@ li {
   border-top: 7px solid #000000;
 
   transition: 0.4s;
-}
+} */
 
-.main-menu ul {
+/* .main-menu ul {
   list-style: none;
-}
+} */
 
-.main-menu > li:hover .submenu {
-  visibility: visible;
-  opacity: 1;
-  background-color: white;
-  top: 100%;
-  transition: 0.3s;
-  /* transform: scaley(1); */
-}
+/* .subsubmenu li:hover,
+.school-list-item:hover  */
 
-.submenu {
-  position: absolute;
-  top: 140%;
-  left: 0;
-  z-index: 4;
-}
+/* .subsubmenu a  */
 
-.submenu li {
-  height: 50px;
-
-  font-size: 14px;
-  text-align: left;
-
-  /* border-bottom: 1px rgb(155, 150, 150) solid; */
-}
-
-/*----------------------------*\
-  submenu, subsubmenu .school-submenu
-\*----------------------------*/
-
-.submenu,
-.subsubmenu,
-.school-submenu {
-  width: 350px;
-  padding-left: 0;
-
-  /* transform: scale(0); */
-
-  opacity: 0;
-  visibility: hidden;
-  background-color: white;
-  color: rgb(54, 54, 54);
-  box-shadow: -1px -1px 3px gray, 1px 1px 3px gray;
-}
-
-.submenu li:hover,
-.subsubmenu li:hover,
-.school-list-item:hover {
-  color: rgb(61, 112, 178);
-  background-color: rgba(73, 92, 145, 0.07);
-}
-
-.submenu li a,
-.subsubmenu a {
+/* .submenu li a {
   position: relative;
   left: 10px;
 
   color: inherit;
-}
+} */
 
 /*----------------------------*\
   subsubmenu
 \*----------------------------*/
 
-.subsubmenu {
+/* .subsubmenu {
   position: relative;
   left: 110%;
   top: -18px;
-  /* display: none; */
+
 
   transition: 0.3s;
 }
@@ -532,7 +634,7 @@ li {
   border-left: 7px solid #000000;
 
   content: "";
-}
+} */
 
 /*----------------------------*\
   school-submenu
@@ -542,7 +644,7 @@ li {
   /* position: relative; */
 }
 
-.school-list-item:hover .school-submenu {
+/* .school-list-item:hover .school-submenu {
   top: 100%;
   left: 0;
 
@@ -561,25 +663,25 @@ li {
   transition-duration: 0.3s;
   visibility: hidden;
   opacity: 0;
-}
+} */
 
 /*----------------------------*\
   school-left-columm
 \*----------------------------*/
 
-.school-left-columm {
+/* .school-left-columm {
   display: inline-block;
   width: 200px;
   height: inherit;
 
   left: -20px;
-}
+} */
 
 /*----------------------------*\
   school-left-content
 \*----------------------------*/
 
-.school-main-subject {
+/* .school-main-subject {
   position: relative;
 
   display: block;
@@ -621,17 +723,17 @@ li {
 .ex ul li:hover a {
   color: black;
   font-weight: 400;
-}
+} */
 /*----------------------------*\
   school-right-columm
 \*----------------------------*/
 
-.school-right-column {
+/* .school-right-column {
   display: block;
   height: inherit;
   width: 200px;
   float: right;
-}
+} */
 
 /*----------------------------*\
   school-right-content
@@ -641,27 +743,27 @@ li {
   school-classes
 \*----------------------------*/
 
-.school-right-content {
+/* .school-right-content {
 }
 
 .school-classes ul {
   top: 10px;
 
-  display: flex;
-  /* flex-direction: row;
+  display: flex; */
+/* flex-direction: row;
   flex-wrap: wrap; */
-  /* flex-grow: ;; */
-  flex-flow: wrap row;
+/* flex-grow: ;; */
+/* flex-flow: wrap row;
   width: 170px;
   height: 150px;
 
   margin: 0 auto;
 }
 
-.school-classes ul li {
-  /* display: inline-block; */
+.school-classes ul li { */
+/* display: inline-block; */
 
-  width: 30px;
+/* width: 30px;
   height: 30px;
   margin: 5px;
 
@@ -689,12 +791,12 @@ li {
   display: block;
   top: 10px;
   height: 30px;
-}
+} */
 
 /*----------------------------*\
   ex ОГЭ ЕГЭ
 \*----------------------------*/
-.ex ul {
+/* .ex ul {
   top: 0px;
 }
 
@@ -711,7 +813,7 @@ li {
   src: url("../fonts/Display\ Pro.ttf");
   font-style: normal;
   font-weight: normal;
-}
+} */
 
 /* .left-main-margin {
   position: relative;
