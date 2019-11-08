@@ -429,7 +429,6 @@ nav {
   font-family: FontAwesome;
 
   transform: translate(0, -50%);
-
   transition-duration: 0.1s;
 }
 
@@ -452,12 +451,10 @@ nav {
   display: block;
 
   font-size: 14px !important;
-  /* font-family: DisplayPro, Arial, sans-serif !important; */
 
   color: rgb(54, 54, 54);
 
   transform: translate(-50%, -50%);
-
   cursor: pointer;
 }
 
@@ -472,15 +469,20 @@ nav {
 .toys {
 }
 
+.fiction {
+}
+
 /*----------------------------*\
   submenu
 \*----------------------------*/
 
 .main-menu > li:hover .submenu {
+  top: 39px;
+
   visibility: visible;
   opacity: 1;
   background-color: rgb(255, 255, 255);
-  top: 39px;
+
   transition-duration: 0.3s;
 }
 
@@ -497,7 +499,6 @@ nav {
   visibility: hidden;
   background-color: rgb(184, 184, 184);
   color: rgb(54, 54, 54);
-  /* box-shadow: -1px -1px 3px rgb(233, 233, 233), 1px 1px 3px gray; */
   box-shadow: 0 0 4px 1px gray;
 }
 
@@ -527,7 +528,7 @@ nav {
   border-bottom: 1px solid #ededed;
 }
 
-.submenu li a {
+.submenu > li a {
   position: relative !important;
   left: 0px !important;
   top: 0px !important;
@@ -545,7 +546,7 @@ nav {
   background-color: rgba(73, 92, 145, 0.07);
 }
 
-.submenu li:hover a {
+.submenu li:hover > a {
   color: rgb(61, 112, 178) !important;
 }
 
@@ -562,7 +563,258 @@ nav {
   font-family: FontAwesome;
 
   transform: translate(0, -50%);
+  transition-duration: 0.1s;
 }
+
+/*----------------------------*\
+        subsubmenu
+\*----------------------------*/
+
+.subsubmenu {
+  position: absolute;
+  left: 110%;
+  z-index: 1;
+
+  padding-left: 0;
+  width: 300px;
+
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgb(184, 184, 184);
+  color: rgb(54, 54, 54);
+  box-shadow: 0 0 4px 1px gray;
+}
+
+.submenu > li:hover .subsubmenu {
+  left: 100%;
+  top: 0;
+
+  visibility: visible;
+  opacity: 1;
+  background-color: rgb(255, 255, 255);
+
+  transition-duration: 0.3s;
+}
+
+/*----------------------------*\
+  school-submenu
+\*----------------------------*/
+
+.school-list-item {
+  position: relative;
+}
+
+.school-list-item:hover .school-submenu {
+  top: 100%;
+  left: 0;
+
+  visibility: visible;
+  opacity: 1;
+}
+
+.school-submenu {
+  position: absolute;
+  top: 70px;
+  left: 0;
+
+  width: 400px;
+  height: 350px;
+
+  transition-duration: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.school-submenu a {
+  color: rgb(54, 54, 54) !important;
+}
+/*----------------------------*\
+  school-left-columm
+\*----------------------------*/
+
+.school-left-columm {
+  display: block;
+  float: left;
+
+  width: 200px;
+  height: inherit;
+
+  left: -20px;
+}
+
+/*----------------------------*\
+  school-left-content
+\*----------------------------*/
+
+.school-main-subject {
+  position: relative;
+  top: 10px;
+  left: 14px;
+
+  display: block;
+  margin-bottom: 10px;
+
+  text-align: left;
+
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.school-left-content,
+.ex {
+  width: inherit;
+  height: inherit;
+  margin-left: 20px;
+}
+
+.school-left-content ul,
+.ex ul {
+  top: 10px;
+}
+
+.school-left-content ul li,
+.ex ul li {
+  display: block;
+  height: 30px;
+
+  height: 34px;
+  text-align: left;
+}
+
+.school-left-content ul li a,
+.ex ul li a {
+  color: rgb(134, 134, 134);
+  font-weight: 300;
+  line-height: 34px;
+}
+
+.school-left-content ul li:hover a,
+.ex ul li:hover a {
+  color: black;
+  font-weight: 400;
+}
+/*----------------------------*\
+  school-right-columm
+\*----------------------------*/
+
+.school-right-column {
+  display: block;
+  float: right;
+  height: inherit;
+  width: 200px;
+}
+
+/*----------------------------*\
+  school-right-content
+\*----------------------------*/
+
+/*----------------------------*\
+  school-classes
+\*----------------------------*/
+
+.school-right-content {
+}
+
+.school-classes ul {
+  top: 10px;
+
+  display: flex;
+  /* flex-direction: row;
+  flex-wrap: wrap; */
+  /* flex-grow: ;; */
+  flex-flow: wrap row;
+  width: 170px;
+  height: 150px;
+
+  margin: 0 auto;
+}
+
+.school-classes ul li {
+  /* display: block; */
+
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  padding: unset;
+  /* float: left; */
+
+  border: solid #afafaf 1px;
+  border-radius: 3px;
+}
+
+.school-classes ul li:hover {
+  background: rgb(223, 223, 223);
+}
+.school-classes ul li a {
+  position: absolute !important;
+  /* top: 50% !important;
+  left: 50% !important; */
+  top: 50%;
+  left: 50%;
+
+  display: block;
+
+  transform: translate(-50%, -50%);
+
+  /* line-height: 30px;
+  text-align: center; */
+}
+
+.classes-tittle {
+  position: relative;
+  display: block;
+  top: 10px;
+  height: 30px;
+}
+
+/*----------------------------*\
+  ex ОГЭ ЕГЭ
+\*----------------------------*/
+.ex ul {
+  top: 0px;
+}
+
+.ex ul a {
+  text-align: center;
+}
+
+/* .test p {
+  font-family: "DisplayPro";
+} */
+
+@font-face {
+  font-family: "DisplayPro";
+  src: url("../fonts/Display\ Pro.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* .left-main-margin {
+  position: relative;
+  float: left;
+  z-index: 1;
+
+  width: 200px;
+  height: 1000px;
+
+  background: gray;
+}
+
+.right-main-margin {
+  position: relative;
+  float: right;
+  z-index: 1;
+
+  width: 200px;
+  height: 1000px;
+
+  background: gray;
+} */
+
+/* .submenu li:hover a {
+  color: rgb(0, 26, 52) !important;
+} */
 
 /* .submenu-link:after {
   position: relative;
@@ -634,205 +886,4 @@ nav {
   border-left: 7px solid #000000;
 
   content: "";
-} */
-
-/*----------------------------*\
-  school-submenu
-\*----------------------------*/
-
-.school-list-item {
-  /* position: relative; */
-}
-
-/* .school-list-item:hover .school-submenu {
-  top: 100%;
-  left: 0;
-
-  visibility: visible;
-  opacity: 1;
-}
-
-.school-submenu {
-  position: absolute;
-  top: 70px;
-  left: 0;
-
-  width: 500px;
-  height: 350px;
-
-  transition-duration: 0.3s;
-  visibility: hidden;
-  opacity: 0;
-} */
-
-/*----------------------------*\
-  school-left-columm
-\*----------------------------*/
-
-/* .school-left-columm {
-  display: inline-block;
-  width: 200px;
-  height: inherit;
-
-  left: -20px;
-} */
-
-/*----------------------------*\
-  school-left-content
-\*----------------------------*/
-
-/* .school-main-subject {
-  position: relative;
-
-  display: block;
-  top: 10px;
-  text-align: left;
-
-  font-weight: 600;
-  font-size: 17px;
-}
-
-.school-left-content,
-.ex {
-  width: inherit;
-  height: inherit;
-  margin-left: 20px;
-}
-
-.school-left-content ul,
-.ex ul {
-  top: 10px;
-}
-
-.school-left-content ul li,
-.ex ul li {
-  display: block;
-  height: 30px;
-
-  height: 34px;
-  text-align: left;
-}
-
-.school-left-content ul li a,
-.ex ul li a {
-  color: rgb(134, 134, 134);
-  font-weight: 300;
-}
-
-.school-left-content ul li:hover a,
-.ex ul li:hover a {
-  color: black;
-  font-weight: 400;
-} */
-/*----------------------------*\
-  school-right-columm
-\*----------------------------*/
-
-/* .school-right-column {
-  display: block;
-  height: inherit;
-  width: 200px;
-  float: right;
-} */
-
-/*----------------------------*\
-  school-right-content
-\*----------------------------*/
-
-/*----------------------------*\
-  school-classes
-\*----------------------------*/
-
-/* .school-right-content {
-}
-
-.school-classes ul {
-  top: 10px;
-
-  display: flex; */
-/* flex-direction: row;
-  flex-wrap: wrap; */
-/* flex-grow: ;; */
-/* flex-flow: wrap row;
-  width: 170px;
-  height: 150px;
-
-  margin: 0 auto;
-}
-
-.school-classes ul li { */
-/* display: inline-block; */
-
-/* width: 30px;
-  height: 30px;
-  margin: 5px;
-
-  float: left;
-
-  border: solid #afafaf 1px;
-  border-radius: 3px;
-
-  text-align: center;
-}
-
-.school-classes ul li:hover {
-  background: rgb(223, 223, 223);
-}
-.school-classes ul li a {
-  position: relative;
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-}
-
-.classes-tittle {
-  position: relative;
-  display: block;
-  top: 10px;
-  height: 30px;
-} */
-
-/*----------------------------*\
-  ex ОГЭ ЕГЭ
-\*----------------------------*/
-/* .ex ul {
-  top: 0px;
-}
-
-.ex ul a {
-  text-align: center;
-}
-
-.test p {
-  font-family: "DisplayPro";
-}
-
-@font-face {
-  font-family: "DisplayPro";
-  src: url("../fonts/Display\ Pro.ttf");
-  font-style: normal;
-  font-weight: normal;
-} */
-
-/* .left-main-margin {
-  position: relative;
-  float: left;
-  z-index: 1;
-
-  width: 200px;
-  height: 1000px;
-
-  background: gray;
-}
-
-.right-main-margin {
-  position: relative;
-  float: right;
-  z-index: 1;
-
-  width: 200px;
-  height: 1000px;
-
-  background: gray;
 } */
