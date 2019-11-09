@@ -296,14 +296,14 @@ li {
   height: 60px;
 
   transform: translate(0, 3px);
-  transition-duration: 0.2s;
+  transition-duration: 3s;
 
   cursor: pointer;
 }
 
 .personal-list > li:hover {
   transform: translate(0, -3px);
-  transition-duration: 0.2s;
+  transition: transform 1s;
 }
 
 .personal-list > li:hover,
