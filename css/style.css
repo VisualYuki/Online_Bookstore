@@ -296,14 +296,13 @@ li {
   height: 60px;
 
   transform: translate(0, 3px);
-  transition-duration: 3s;
+  transition-duration: 0.3s;
 
   cursor: pointer;
 }
 
 .personal-list > li:hover {
   transform: translate(0, -3px);
-  transition: transform 1s;
 }
 
 .personal-list > li:hover,
@@ -798,7 +797,7 @@ nav {
   width: 100%;
   height: 1500px;
 
-  background: grey;
+  /* background: rgb(211, 211, 211); */
 }
 
 /*********************************
@@ -806,17 +805,204 @@ nav {
 **********************************/
 
 .news-block {
+  position: relative;
+
   width: inherit;
   height: 340px;
   margin: 30px 0;
   padding: 0 200px;
 
-  background: rgb(247, 247, 247);
+  /* background: rgb(247, 247, 247); */
 }
 
 /*---------------------*\
       news-left-colummn
 \*---------------------*/
+
+.news-left-column {
+  position: relative;
+
+  float: left;
+  width: 1050px;
+  height: 340px;
+}
+
+.news-left-column input {
+  display: none;
+}
+
+.overflow {
+  height: inherit;
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.image {
+  height: inherit;
+  width: 500%;
+}
+
+.news-left-column a {
+  display: block;
+  float: left;
+
+  width: 1050px;
+  height: 340px;
+}
+
+.news-left-column img {
+  width: inherit;
+  height: inherit;
+}
+
+.controls {
+  margin: -19% 0 0 0;
+  width: 100%;
+  height: 50px;
+
+  cursor: pointer;
+}
+
+/*---------------------*\
+  left and right angle (button)
+\*---------------------*/
+
+/* left button */
+#switch1:checked ~ .controls label:nth-child(4),
+#switch2:checked ~ .controls label:nth-child(1),
+#switch3:checked ~ .controls label:nth-child(2),
+#switch4:checked ~ .controls label:nth-child(3) {
+  position: absolute;
+
+  /* top: 50%; */
+  left: 30px;
+
+  display: block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* right button */
+#switch1:checked ~ .controls label:nth-child(2),
+#switch2:checked ~ .controls label:nth-child(3),
+#switch3:checked ~ .controls label:nth-child(4),
+#switch4:checked ~ .controls label:nth-child(1) {
+  position: absolute;
+
+  /* top: 50%; */
+  right: 30px;
+
+  display: block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: rgba(223, 223, 223, 0.9);
+
+  cursor: pointer;
+}
+
+/* mutual property of button */
+
+/* left button */
+.controls label:hover {
+  background: white !important;
+}
+
+#switch1:checked ~ .controls label:nth-child(4):before,
+#switch2:checked ~ .controls label:nth-child(1):before,
+#switch3:checked ~ .controls label:nth-child(2):before,
+#switch4:checked ~ .controls label:nth-child(3):before,
+/* right button */
+#switch1:checked ~ .controls label:nth-child(2):before,
+#switch2:checked ~ .controls label:nth-child(3):before,
+#switch3:checked ~ .controls label:nth-child(4):before,
+#switch4:checked ~ .controls label:nth-child(1):before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* z-index: 1; */
+
+  display: block;
+
+  font-family: FontAwesome;
+
+  color: gray;
+
+  transform: translate(-50%, -50%);
+
+  cursor: pointer;
+}
+
+/* angle of the left and right button*/
+#switch1:checked ~ .controls label:nth-child(4):before,
+#switch2:checked ~ .controls label:nth-child(1):before,
+#switch3:checked ~ .controls label:nth-child(2):before,
+#switch4:checked ~ .controls label:nth-child(3):before {
+  content: "\f104";
+}
+
+#switch1:checked ~ .controls label:nth-child(2):before,
+#switch2:checked ~ .controls label:nth-child(3):before,
+#switch3:checked ~ .controls label:nth-child(4):before,
+#switch4:checked ~ .controls label:nth-child(1):before {
+  content: "\f105";
+}
+
+/*---------------------*\
+      active label
+\*---------------------*/
+
+#switch1:checked ~ .overflow .image {
+  margin-left: 0;
+}
+
+#switch2:checked ~ .overflow .image {
+  margin-left: -100%;
+}
+
+#switch3:checked ~ .overflow .image {
+  margin-left: -200%;
+}
+
+#switch4:checked ~ .overflow .image {
+  margin-left: -300%;
+}
+
+#switch1:checked ~ .active label:nth-child(1),
+#switch2:checked ~ .active label:nth-child(2),
+#switch3:checked ~ .active label:nth-child(3),
+#switch4:checked ~ .active label:nth-child(4) {
+  background: red;
+}
+
+.active {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 30px;
+  width: 100px;
+
+  transform: translate(-50%, 0);
+}
+
+.active label {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  margin: 0 3px;
+
+  background: rgb(235, 235, 235);
+  border-radius: 50%;
+
+  cursor: pointer;
+}
 
 /*---------------------*\
       news-right-column
@@ -851,6 +1037,7 @@ nav {
 
   bottom: 0;
 }
+
 /* .left-main-margin {
   position: relative;
   float: left;
