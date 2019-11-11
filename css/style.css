@@ -1,3 +1,25 @@
+/* .left-main-margin {
+  position: relative;
+  float: left;
+  z-index: 1;
+
+  width: 200px;
+  height: 1000px;
+
+  background: gray;
+}
+
+.right-main-margin {
+  position: relative;
+  float: right;
+  z-index: 1;
+
+  width: 200px;
+  height: 1000px;
+
+  background: gray;
+} */
+
 /*============================================
         HEADER
 =============================================*/
@@ -800,6 +822,10 @@ nav {
   /* background: rgb(211, 211, 211); */
 }
 
+.main-page > div {
+  padding: 0 200px;
+}
+
 /*********************************
 	      News-block
 **********************************/
@@ -810,7 +836,6 @@ nav {
   width: inherit;
   height: 340px;
   margin: 30px 0;
-  padding: 0 200px;
 
   /* background: rgb(247, 247, 247); */
 }
@@ -827,18 +852,18 @@ nav {
   height: 340px;
 }
 
-.news-left-column input {
+input[type="radio"] {
   display: none;
 }
 
-.overflow {
+.news-left-column .overflow {
   height: inherit;
   width: 100%;
 
   overflow: hidden;
 }
 
-.image {
+.news-left-column .image {
   height: inherit;
   width: 500%;
 }
@@ -856,7 +881,7 @@ nav {
   height: inherit;
 }
 
-.controls {
+.news-left-column .controls {
   margin: -19% 0 0 0;
   width: 100%;
   height: 50px;
@@ -869,10 +894,10 @@ nav {
 \*---------------------*/
 
 /* left button */
-#switch1:checked ~ .controls label:nth-child(4),
-#switch2:checked ~ .controls label:nth-child(1),
-#switch3:checked ~ .controls label:nth-child(2),
-#switch4:checked ~ .controls label:nth-child(3) {
+.news-left-column #switch1:checked ~ .controls label:nth-child(4),
+.news-left-column #switch2:checked ~ .controls label:nth-child(1),
+.news-left-column #switch3:checked ~ .controls label:nth-child(2),
+.news-left-column #switch4:checked ~ .controls label:nth-child(3) {
   position: absolute;
 
   /* top: 50%; */
@@ -886,10 +911,10 @@ nav {
 }
 
 /* right button */
-#switch1:checked ~ .controls label:nth-child(2),
-#switch2:checked ~ .controls label:nth-child(3),
-#switch3:checked ~ .controls label:nth-child(4),
-#switch4:checked ~ .controls label:nth-child(1) {
+.news-left-column #switch1:checked ~ .controls label:nth-child(2),
+.news-left-column #switch2:checked ~ .controls label:nth-child(3),
+.news-left-column #switch3:checked ~ .controls label:nth-child(4),
+.news-left-column #switch4:checked ~ .controls label:nth-child(1) {
   position: absolute;
 
   /* top: 50%; */
@@ -907,19 +932,19 @@ nav {
 /* mutual property of button */
 
 /* left button */
-.controls label:hover {
+.news-left-column .controls label:hover {
   background: white !important;
 }
 
-#switch1:checked ~ .controls label:nth-child(4):before,
-#switch2:checked ~ .controls label:nth-child(1):before,
-#switch3:checked ~ .controls label:nth-child(2):before,
-#switch4:checked ~ .controls label:nth-child(3):before,
+.news-left-column #switch1:checked ~ .controls label:nth-child(4):before,
+.news-left-column #switch2:checked ~ .controls label:nth-child(1):before,
+.news-left-column #switch3:checked ~ .controls label:nth-child(2):before,
+.news-left-column #switch4:checked ~ .controls label:nth-child(3):before,
 /* right button */
-#switch1:checked ~ .controls label:nth-child(2):before,
-#switch2:checked ~ .controls label:nth-child(3):before,
-#switch3:checked ~ .controls label:nth-child(4):before,
-#switch4:checked ~ .controls label:nth-child(1):before {
+.news-left-column #switch1:checked ~ .controls label:nth-child(2):before,
+.news-left-column #switch2:checked ~ .controls label:nth-child(3):before,
+.news-left-column #switch3:checked ~ .controls label:nth-child(4):before,
+.news-left-column #switch4:checked ~ .controls label:nth-child(1):before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -937,17 +962,17 @@ nav {
 }
 
 /* angle of the left and right button*/
-#switch1:checked ~ .controls label:nth-child(4):before,
-#switch2:checked ~ .controls label:nth-child(1):before,
-#switch3:checked ~ .controls label:nth-child(2):before,
-#switch4:checked ~ .controls label:nth-child(3):before {
+.news-left-column #switch1:checked ~ .controls label:nth-child(4):before,
+.news-left-column #switch2:checked ~ .controls label:nth-child(1):before,
+.news-left-column #switch3:checked ~ .controls label:nth-child(2):before,
+.news-left-column #switch4:checked ~ .controls label:nth-child(3):before {
   content: "\f104";
 }
 
-#switch1:checked ~ .controls label:nth-child(2):before,
-#switch2:checked ~ .controls label:nth-child(3):before,
-#switch3:checked ~ .controls label:nth-child(4):before,
-#switch4:checked ~ .controls label:nth-child(1):before {
+.news-left-column #switch1:checked ~ .controls label:nth-child(2):before,
+.news-left-column #switch2:checked ~ .controls label:nth-child(3):before,
+.news-left-column #switch3:checked ~ .controls label:nth-child(4):before,
+.news-left-column #switch4:checked ~ .controls label:nth-child(1):before {
   content: "\f105";
 }
 
@@ -955,30 +980,34 @@ nav {
       active label
 \*---------------------*/
 
-#switch1:checked ~ .overflow .image {
+.news-left-column #switch1:checked ~ .overflow .image {
   margin-left: 0;
 }
 
-#switch2:checked ~ .overflow .image {
+.news-left-column #switch2:checked ~ .overflow .image {
   margin-left: -100%;
 }
 
-#switch3:checked ~ .overflow .image {
+.news-left-column #switch3:checked ~ .overflow .image {
   margin-left: -200%;
 }
 
-#switch4:checked ~ .overflow .image {
+.news-left-column #switch4:checked ~ .overflow .image {
   margin-left: -300%;
 }
 
-#switch1:checked ~ .active label:nth-child(1),
-#switch2:checked ~ .active label:nth-child(2),
-#switch3:checked ~ .active label:nth-child(3),
-#switch4:checked ~ .active label:nth-child(4) {
+.news-left-column .overflow .image {
+  transition: margin-left 0.5s ease-in-out;
+}
+
+.news-left-column #switch1:checked ~ .active label:nth-child(1),
+.news-left-column #switch2:checked ~ .active label:nth-child(2),
+.news-left-column #switch3:checked ~ .active label:nth-child(3),
+.news-left-column #switch4:checked ~ .active label:nth-child(4) {
   background: red;
 }
 
-.active {
+.news-left-column .active {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -992,7 +1021,7 @@ nav {
   transform: translate(-50%, 0);
 }
 
-.active label {
+.news-left-column .active label {
   display: inline-block;
   height: 12px;
   width: 12px;
@@ -1038,24 +1067,47 @@ nav {
   bottom: 0;
 }
 
-/* .left-main-margin {
-  position: relative;
-  float: left;
-  z-index: 1;
+/*********************************
+	     CATEGORY BLOCK
+**********************************/
 
-  width: 200px;
-  height: 1000px;
-
-  background: gray;
+.categories > h2 {
+  font-size: 20px !important;
+  color: #363636;
 }
 
-.right-main-margin {
-  position: relative;
-  float: right;
-  z-index: 1;
+/*---------------------*\
+        SLIDER
+\*---------------------*/
 
-  width: 200px;
-  height: 1000px;
+.category-slider-item-anchor {
+  display: inline-block;
+  width: 363px;
+  height: 170px;
+}
 
-  background: gray;
-} */
+.category-slider-item {
+  display: inline-block;
+
+  width: inherit;
+  height: inherit;
+}
+
+.category-slider-item img {
+  border-radius: 4px;
+}
+
+.category-slider-title {
+  width: inherit;
+  height: 52px;
+  margin-top: -55px;
+
+  font-size: 16px;
+  line-height: 55px;
+  padding-left: 16px;
+  font-weight: bolder;
+
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 4px 4px;
+}
