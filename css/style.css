@@ -1117,14 +1117,20 @@ input[type="radio"] {
 **********************************/
 
 .recommended-reading-block {
+  position: relative;
+
   width: inherit;
   height: 450px;
+
+  font-family: "Open Sans", "Segoe UI", sans-serif, Arial;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, , 'Helvetica Neue', sans-serif; */
 }
 
 .book {
   height: inherit;
   width: 202px;
-  padding: 20px;
+  padding: 10px;
 
   border-radius: 4px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
@@ -1134,6 +1140,38 @@ input[type="radio"] {
 
 .book:hover {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.book-bestseller {
+  position: absolute;
+  top: 15px;
+  left: -6px;
+  z-index: 1;
+
+  width: 75px;
+  height: 18px;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+
+  color: white;
+  background: #fe6562;
+}
+
+.book-bestseller:before {
+  content: "";
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  width: 0;
+  height: 0;
+
+  border-top: 6px solid #fe6562;
+  border-left: 6px solid transparent;
 }
 
 .book-image a {
@@ -1149,13 +1187,13 @@ input[type="radio"] {
 }
 
 .book-content {
-  margin: 25px auto;
-  width: 160px;
+  margin: 45px auto;
+  width: 170px;
   height: 150px;
 }
 
 .book-body {
-  margin-left: 15px;
+  /* margin-left: 15px; */
 }
 
 .book-new-price {
@@ -1166,50 +1204,140 @@ input[type="radio"] {
   color: black;
 }
 
-.book-new-price span {
+/* .book-new-price span {
   font-weight: normal;
   font-size: 19px;
-}
+} */
 
-.book-old-price span {
+.book-old-price {
   display: inline-block;
 
+  font-size: 14px;
+  font-weight: normal;
   text-decoration-line: line-through;
   text-decoration-color: gray;
 
-  font-size: 14px;
   color: #7d8290;
 }
 
 .book-discount {
-  display: inline-block;
-  width: 36px;
-  height: 18px;
-  margin-left: 3px;
+  display: block;
+  width: 130px;
+  height: 22px;
+  margin: 5px 0;
 
   font-size: 12px;
-  line-height: 18px;
-  text-indent: 4px;
+  line-height: 22px;
+  font-weight: normal;
 
+  border: #fe6562 solid 1px;
+}
+
+.percent-discount {
+  display: inline-block;
+  width: 30%;
+  height: 21px;
+
+  text-align: center;
+
+  background: #fe6562;
   color: white;
-  border-radius: 5px;
-  background: #fd6462;
+}
+
+.rub-discount {
+  display: inline-block;
+  width: 65%;
+  height: 18px;
+
+  text-align: center;
+
+  background: white;
+  color: #fe6562;
 }
 
 .book-title {
   margin: 5px 0;
   width: 110%;
 
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
   font-weight: normal;
-  font-size: 18px;
+  font-size: 16px;
 
   color: #242424;
 }
 
+.book-title a {
+  display: block;
+  width: 150px;
+}
+
 .book-author {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
   font-weight: normal;
+  font-size: 13px;
 
   color: #7d8290;
+}
+
+.book-button {
+  display: inline-block;
+
+  width: 130px;
+  height: 30px;
+  margin: 50px 0 0 0;
+
+  border: rgb(207, 207, 207) solid 1px;
+  border-radius: 4px;
+}
+
+.book-button:hover {
+  background: #005bff;
+}
+
+.book-button a:before {
+  content: "\f217";
+  font-family: FontAwesome;
+
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+.book-button a {
+  display: block;
+  top: 50%;
+
+  font-family: "Open Sans", "Segoe UI", sans-serif, Arial;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  text-indent: 15px;
+
+  color: #333333;
+
+  transform: translate(0, -50%);
+}
+
+.to-wish-list {
+  display: inline-block;
+
+  height: 30px;
+  width: 17px;
+}
+
+.to-wish-list:after {
+  content: "\f08a";
+  font-family: FontAwesome;
+
+  position: absolute;
+  top: 45%;
+  left: 10px;
+}
+
+.to-wish-list:after:hover {
+  content: "\f004";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 45%;
+  left: 10px;
 }
