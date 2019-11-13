@@ -136,35 +136,6 @@ li {
   color: #004ed6;
 }
 
-/*---------------------*\
-      social-network 
-\*---------------------*/
-
-.social-network {
-  position: relative;
-  top: 50%;
-
-  display: flex;
-  float: right;
-  justify-content: right;
-
-  transform: translate(0, -50%);
-}
-
-.social-network a {
-  padding: 15px;
-
-  color: #808d9a;
-}
-
-.social-network a:hover {
-  color: #004ed6;
-}
-
-.last-social {
-  margin-right: 15px;
-}
-
 /*********************************
 	      Top header-up
 **********************************/
@@ -199,9 +170,10 @@ li {
   /*background-size: 70px 150px; */
 }
 
-.logo-container img {
-  width: 150px;
-  height: 150px;
+.logo-title {
+  height: inherit;
+
+  font-family: LogoFont;
 }
 
 .search-container {
@@ -473,7 +445,7 @@ nav {
 
   font-size: 14px !important;
 
-  color: rgb(54, 54, 54);
+  color: rgb(0, 26, 52);
 
   transform: translate(-50%, -50%);
   cursor: pointer;
@@ -519,7 +491,7 @@ nav {
   opacity: 0;
   visibility: hidden;
   background-color: rgb(184, 184, 184);
-  color: rgb(54, 54, 54);
+  color: rgb(0, 26, 52);
   box-shadow: 0 0 4px 1px gray;
 }
 
@@ -1417,7 +1389,7 @@ input[type="radio"] {
   margin-right: 50px;
 
   font-family: Open Sans, system-ui, Arial, sans-serif;
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 700;
   line-height: 27px;
   letter-spacing: 1px;
@@ -1463,27 +1435,144 @@ input[type="radio"] {
   color: white;
 }
 
+.button-subscribe {
+  height: 40px;
+  width: 180px;
+
+  font-size: 14px;
+  font-variant: normal;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+
+  border-radius: 4px;
+  background-color: #fe6562;
+}
+
+.button-subscribe:hover {
+  background: #d64c49;
+}
+
 /*********************************
 	      FOOTER-MAIN
 **********************************/
 
 .footer-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 201px;
   width: inherit;
   padding: 0 200px;
 
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  white-space: nowrap;
+  font-weight: 600;
+
+  color: rgb(0, 26, 52);
   border-bottom: solid rgb(230, 230, 230) 1px;
   background-color: rgb(244, 248, 251);
+}
+
+.footer-menu-column {
+  width: 240px;
+  height: 150px;
+
+  /* background: rgb(231, 231, 231); */
+}
+
+.footer-menu-ul {
+}
+
+.footer-menu-ul li {
+  display: block;
+  height: 18px;
+  margin-bottom: 8px;
+
+  font-weight: normal;
+
+  color: #4d5f71;
+  cursor: initial;
+}
+
+.footer-menu-ul li a {
+  display: block;
+
+  /* width: 50%; */
+  height: inherit;
+
+  cursor: pointer;
+}
+
+.menu-column-title {
+  display: block;
+  margin-bottom: 13px;
+
+  font-weight: bold;
+}
+
+.footer-menu-column:last-child {
+  font-weight: normal;
+}
+
+.footer-menu-column:last-child span:last-child {
+  position: absolute;
+  bottom: 0;
+
+  display: block;
+}
+
+/*---------------------*\
+      social-network 
+\*---------------------*/
+
+.social-network {
+  position: relative;
+  top: -5%;
+  left: 33px;
+
+  display: flex;
+  float: right;
+  justify-content: left;
+
+  /* transform: translate(0, -50%); */
+}
+
+.social-network a {
+  padding: 15px;
+
+  color: #808d9a;
+}
+
+.social-network a:hover {
+  color: #004ed6;
+}
+
+.last-social {
+  margin-right: 15px;
 }
 
 /*********************************
 	      FOOTER-DOWN
 **********************************/
 
-.footer-down {
+/* .footer-down {
   height: 87px;
   width: inherit;
   padding: 0 200px;
 
   background-color: rgb(244, 248, 251);
+} */
+
+@font-face {
+  font-family: OZON;
+
+  src: url("/Online_Bookstore/fonts/OZON.otf");
+}
+
+@font-face {
+  font-family: LogoFont;
+
+  src: url("/Online_Bookstore/fonts/LogoFont.ttf");
 }
