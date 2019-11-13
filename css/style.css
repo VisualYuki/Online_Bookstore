@@ -1397,10 +1397,75 @@ input[type="radio"] {
 **********************************/
 
 .footer-subsribe {
-  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 86px;
-  background: #e8f0f7;
+  width: inherit;
+
+  font-variant: small-caps;
+
+  background: #061a32;
+  color: white;
 }
+
+.footer-subsribe img {
+  margin-right: 50px;
+}
+
+.subscriprion-title {
+  margin-right: 50px;
+
+  font-family: Open Sans, system-ui, Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 1px;
+}
+
+.subscribe-email {
+  height: 44px;
+  width: 400px;
+  padding-left: 15px;
+  margin-right: 40px;
+
+  font-size: 17px;
+  line-height: 20px;
+  text-align: left;
+
+  background-color: rgb(67, 81, 97);
+  /* border: 1px solid rgb(199, 204, 215); */
+  border: none;
+  border-radius: 1px;
+
+  cursor: text;
+}
+
+.subscribe-email:hover {
+  background: #526d85;
+  outline: none;
+}
+
+.subscribe-email:focus {
+  outline: none;
+  color: black;
+  background: white;
+}
+
+/* .subscribe-email:hover::placeholder {
+  color: transparent;
+} */
+
+.subscribe-email::placeholder {
+  font-size: 16px;
+  font-weight: 600;
+
+  color: white;
+}
+
+/*********************************
+	      FOOTER-MAIN
+**********************************/
 
 .footer-main {
   height: 201px;
@@ -1410,6 +1475,10 @@ input[type="radio"] {
   border-bottom: solid rgb(230, 230, 230) 1px;
   background-color: rgb(244, 248, 251);
 }
+
+/*********************************
+	      FOOTER-DOWN
+**********************************/
 
 .footer-down {
   height: 87px;
