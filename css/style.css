@@ -158,22 +158,42 @@ li {
 
 .logo-container {
   position: absolute;
-  width: 150px;
-  height: 70px;
 
-  background-image: url("../image/Logo2-empty.jpg");
-  /* background-image: url("../image/Logo1-empty.jpg"); */
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 450px;
+  height: 80px;
 
+  /* background-image: url("../image/Logo2-empty.jpg");
   background-size: contain;
-  background-repeat: no-repeat;
-
-  /*background-size: 70px 150px; */
+  background-repeat: no-repeat; */
 }
 
 .logo-title {
-  height: inherit;
+  margin-left: 10px;
 
   font-family: LogoFont;
+  font-size: 60px;
+
+  text-shadow: 0 0 12px 12px red;
+
+  color: #005bff;
+}
+
+.pre-title {
+  position: absolute;
+  top: 0px;
+  left: 100px;
+
+  font-size: 13px;
+  font-family: cursive;
+}
+
+@font-face {
+  font-family: LogoFont;
+
+  src: url(/Online_Bookstore/fonts/LogoFont.ttf);
 }
 
 .search-container {
@@ -1482,9 +1502,6 @@ input[type="radio"] {
   /* background: rgb(231, 231, 231); */
 }
 
-.footer-menu-ul {
-}
-
 .footer-menu-ul li {
   display: block;
   height: 18px;
@@ -1574,5 +1591,11 @@ input[type="radio"] {
 @font-face {
   font-family: LogoFont;
 
-  src: url("/Online_Bookstore/fonts/LogoFont.ttf");
+  src: url(/Online_Bookstore/fonts/LogoFont.ttf);
+}
+
+@font-face {
+  font-family: LogoFont2;
+
+  src: url(/Online_Bookstore/fonts/LogoFont2.ttf);
 }
