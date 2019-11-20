@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+  <head lang="ru">
     <meta charset="utf-8" />
-
-    <link rel="stylesheet" href="css\style index.css" />
+    <title>
+      Думай как математик: Как решать любые задачи быстрее и эффективнее
+    </title>
+    <link rel="stylesheet" href="css/header footer style.css" />
+    <link rel="stylesheet" href="css/book page style.css" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="css/header footer style.css" />
-    <title>Сила в книгах | Продажа литературы на любой вкус и цвет</title>
-
-    <!-- <link rel="stylesheet" href="fonts/ofont.ru_PF DinDisplay Pro.ttf" /> -->
   </head>
   <body>
     <div class="left-main-margin"></div>
@@ -85,11 +84,11 @@
                 <li class="">
                   <a href="#" class="">Религия</a>
                   <!-- <ul class="subsubmenu">
-                        <li><a href="#">Буддизм</a></li>
-                        <li><a href="#">Православие</a></li>
-                        <li><a href="#">Католичество</a></li>
-                        <li><a href="#">Ислам</a></li>
-                      </ul> -->
+                            <li><a href="#">Буддизм</a></li>
+                            <li><a href="#">Православие</a></li>
+                            <li><a href="#">Католичество</a></li>
+                            <li><a href="#">Ислам</a></li>
+                          </ul> -->
                 </li>
                 <li class="  angle-right ">
                   <a href="#">Художественная литература</a>
@@ -255,226 +254,44 @@
     </header>
     <!-- /HEADER  -->
 
-    <!-- MAIN-PAGE -->
-    <div class="main-page">
-      <!-- NEWS-BLOCK -->
-      <div class="news-block">
-        <!-- NEWS-LEFT-COLUMN -->
-        <div class="news-left-column">
-          <input checked type="radio" id="switch1" name="slider" />
-          <input type="radio" id="switch2" name="slider" />
-          <input type="radio" id="switch3" name="slider" />
-          <input type="radio" id="switch4" name="slider" />
-          <div class="overflow">
-            <div class="image">
-              <a href="#"
-                ><img
-                  src="image/News_Block/news_picture_slider_1.jpg"
-                  title="Станьте Повелителем Рока!"
-              /></a>
-              <a href="#"
-                ><img
-                  src="image/News_Block/news_picture_slider_2.jpg"
-                  title="Стикеры в каждом заказе!"
-              /></a>
-              <a href="#"
-                ><img
-                  src="image/News_Block/news_picture_slider_3.jpg"
-                  alt=""
-                  title="Большая пятерка для жизни"
-              /></a>
-              <a href="#"
-                ><img
-                  src="image/News_Block/news_picture_slider_4.jpg"
-                  alt=""
-                  title="1001 день и ночь"
-              /></a>
-            </div>
+    <div class="main-body">
+      <div class="main-info">
+        <div class="main-info__container">
+          <div class="left-column-pucture">
+            <img class = "book-image" src="image/Book Page/picture1.webp" alt=""/>
           </div>
-          <div class="controls">
-            <label class="fa-lg" for="switch1"></label>
-            <label class="fa-lg" for="switch2"></label>
-            <label class="fa-lg" for="switch3"></label>
-            <label class="fa-lg" for="switch4"></label>
-          </div>
-          <div class="active">
-            <label for="switch1"></label>
-            <label for="switch2"></label>
-            <label for="switch3"></label>
-            <label for="switch4"></label>
-          </div>
-        </div>
-        <!-- END NEWS-LEFT-COLUMN -->
+          <div class="right-column-information">
+            <span class="book-title"> Думай как математик: Как решать любые задачи быстрее и эффективнее</span>
+            <div class="detail-information">
+              <div class="rating-block">
+                <div class="rating-left">
+                  <div class="rating-left-title">Рейтинг</div>
+                  <div class="rating-num">9.53</div>
+                </div>
+                <div class="rating-right">
+                  <div class="rating-right-title">Оценить (оценило: 19)</div>
+                  <div class="rating-right-user-rate">
+                    <span class="star" onmouseover="printStars(1)" onmouseout="doEmptyStar(1)"></span>
+                    <span class="star" onmouseover="printStars(2)" onmouseout="doEmptyStar(2)"></span>
+                    <span class="star" onmouseover="printStars(3)" onmouseout="doEmptyStar(3)"></span>
+                    <span class="star" onmouseover="printStars(4)" onmouseout="doEmptyStar(4)"></span>
+                    <span class="star" onmouseover="printStars(5)" onmouseout="doEmptyStar(5)"></span>
+                    <span class="star" onmouseover="printStars(6)" onmouseout="doEmptyStar(6)"></span>
+                    <span class="star" onmouseover="printStars(7)" onmouseout="doEmptyStar(7)"></span>
+                    <span class="star" onmouseover="printStars(8)" onmouseout="doEmptyStar(8)"></span>
+                    <span class="star" onmouseover="printStars(9)" onmouseout="doEmptyStar(9)"></span>
+                    <span class="star" onmouseover="printStars(10)" onmouseout="doEmptyStar(10)"></span>
+                    
+                  </div>
 
-        <!-- NEWS-RIGHT-COLUMN -->
-        <div class="news-right-column">
-          <a href="#"
-            ><img
-              src="image/News_Block/news_left_picture1.jpg"
-              alt=""
-              height="150"
-          /></a>
-          <a href="#"
-            ><img
-              src="image/News_Block/news_left_picture2.jpg"
-              alt=""
-              height="150"
-          /></a>
-        </div>
-        <!-- END NEWS-RIGHT-COLUMN -->
-      </div>
-      <!-- END NEWS-BLOCK1 -->
-
-      <!-- CATEGORIES BLOCK -->
-      <div class="categories">
-        <h2>Популярные категории</h2>
-        <div class="category-slider">
-          <!-- <input type="radio" id="switch1" />
-          <input type="radio" id="switch2" />
-          <input type="radio" id="switch3" />
-          <input type="radio" id="switch4" />
-          <input type="radio" id="switch5" />
-
-          <div class="left-right-buttons">
-            <label for="switch1"></label>
-            <label for="switch2"></label>
-            <label for="switch3"></label>
-            <label for="switch4"></label>
-            <label for="switch5"></label>
-          </div> -->
-          <div class="overflow">
-            <div class="image">
-              <a class="category-slider-item-anchor" href="#">
-                <div class="category-slider-item">
-                  <img src="image/Categories/picture1.jpg" alt="" />
-                  <div class="category-slider-title">Фэнтези</div>
-                </div>
-              </a>
-              <a class="category-slider-item-anchor" href="#">
-                <div class="category-slider-item ">
-                  <img src="image/Categories/picture2.jpg" alt="" />
-                  <div class="category-slider-title">Детская литература</div>
-                </div>
-              </a>
-              <a class="category-slider-item-anchor" href="#">
-                <div class="category-slider-item ">
-                  <img src="image/Categories/picture3.jpg" alt="" />
-                  <div class="category-slider-title">Современная проза</div>
-                </div>
-              </a>
-              <a class="category-slider-item-anchor" href="#">
-                <div class="category-slider-item ">
-                  <img src="image/Categories/picture4.jpg" alt="" />
-                  <div class="category-slider-title">Кулинария</div>
-                </div>
-              </a>
-              <a class="category-slider-item-anchor" href="#">
-                <div class="category-slider-item ">
-                  <img src="image/Categories/picture5.jpg" alt="" />
-                  <div class="category-slider-title">Рукоделие.Творчество</div>
-                </div>
-              </a>
-              <a class="category-slider-item-anchor" href="#">
-                <div class="category-slider-item ">
-                  <img src="image/Categories/picture6.jpg" alt="" />
-                  <div class="category-slider-title">Детективы</div>
-                </div>
-              </a>
-              <a class="category-slider-item-anchor" href="#">
-                <div class="category-slider-item ">
-                  <img src="image/Categories/picture7.jpg" alt="" />
-                  <div class="category-slider-title">Педагика и психология</div>
-                </div>
-              </a>
-              <a class="category-slider-item-anchor" href="#">
-                <div class="category-slider-item ">
-                  <img src="image/Categories/picture8.jpg" alt="" />
-                  <div class="category-slider-title">Фантастика</div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END CATEGORIES BLOCK -->
-
-      <div class="news-block2">
-        <div class="slider">
-          <img class="item" src="image/One Item Slider/picture1.png" alt="" />
-          <!-- <img class="item" src="image/One Item Slider/picture2.png" alt="" /> -->
-          <img class="item" src="image/One Item Slider/picture3.png" alt="" />
-          <img class="item" src="image/One Item Slider/picture4.png" alt="" />
-          <img class="item" src="image/One Item Slider/picture5.png" alt="" />
-          <a class="prev" onclick="minusSlide()">&#10094;</a>
-          <a class="next" onclick="plusSlide()">&#10095;</a>
-          <div class="slider-dots">
-            <div class="click-area" onclick="ShowSlide(0)">
-              <span class="slider-dots-item">
-                <span class="inside-dots-item"> </span>
-              </span>
-            </div>
-            <div class="click-area" onclick="ShowSlide(1)">
-              <span class="slider-dots-item">
-                <span class="inside-dots-item"> </span>
-              </span>
-            </div>
-            <div class="click-area" onclick="ShowSlide(2)">
-              <span class="slider-dots-item">
-                <span class="inside-dots-item"> </span>
-              </span>
-            </div>
-            <div class="click-area" onclick="ShowSlide(3)">
-              <span class="slider-dots-item">
-                <span class="inside-dots-item"> </span>
-              </span>
-            </div>
-          </div>
-          <script src="js/One Item Slider.js"></script>
-        </div>
-      </div>
-
-      <!-- RECOMENDETED READING BLOCK -->
-      <div class="recommended-reading-block">
-        <div class="book">
-          <div class="book-bestseller">БЕСТСЕЛЛЕР</div>
-          <div class="book-image">
-            <a href="book page.html"
-              ><img src="image/Book_Image/book_image_1.jpg" alt=""
-            /></a>
-          </div>
-          <div class="book-content">
-            <div class="book-body">
-              <div class="book-price-main">
-                <div class="book-new-price">
-                  370 <span>₽</span> <span class="book-old-price">420 р.</span>
-                </div>
-                <div class="book-discount">
-                  <div class="percent-discount">-20%</div>
-                  <div class="rub-discount">Выгода 50 р.</div>
+                  
                 </div>
               </div>
-              <div class="book-title">
-                <a href="book page.html"
-                  >Думай как математик: Как решать любые задачи быстрее и
-                  эффективнее</a
-                >
-              </div>
-              <div class="book-author"><a href="#">Барбара Оакли</a></div>
             </div>
-            <div class="book-button">
-              <a href="#">В КОРЗИНУ</a>
-            </div>
-            <a href="#" class="to-wish-list fa-lg ">
-              <div class="put-to-wish-list">
-                Отложить в избранное
-              </div>
-            </a>
           </div>
         </div>
       </div>
-      <!-- END RECOMENDETED READING BLOCK -->
     </div>
-    <!-- END MAIN-PAGE -->
 
     <!-- FOOTER-->
     <footer>
@@ -536,9 +353,7 @@
             <a href="#" class="fa fa-twitter fa-lg"><span></span></a>
             <a href="#" class="fa fa-tumblr fa-lg"><span></span></a>
             <a href="#" class="fa fa-facebook fa-lg"><span></span></a>
-            <a href="#" class="last-social fa fa-youtube-play fa-lg "
-              ><span></span
-            ></a>
+            <a href="#" class="last-social fa fa-youtube-play fa-lg "> </a>
           </div>
 
           <span
@@ -550,5 +365,6 @@
       <!-- <div class="footer-down"></div> -->
     </footer>
     <!-- END FOOTER-->
+    <script src="js/starRating.js"> </script>
   </body>
 </html>
