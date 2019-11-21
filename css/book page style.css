@@ -60,20 +60,26 @@ html {
 /*********************************
 	     right-column-pucture
 **********************************/
-.right-column-pucture {
+/* .right-column-pucture {
   width: inherit;
   height: 580px;
-}
+} */
 
 .book-title {
   /* font-family: Arial, Helvetica, sans-serif; */
   font-size: 23px;
 }
 
+/*********************************
+	     detail-information
+**********************************/
+
 .detail-information {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  font-size: 13px;
 
   width: inherit;
   height: 50px;
@@ -123,6 +129,8 @@ html {
 
 .rating-right-title {
   font-size: 11px;
+  text-align: center;
+
   color: black;
 }
 
@@ -144,20 +152,60 @@ html {
   background-image: url("/image/RaitingStars/full-star.gif");
 }
 
-.one {
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.ten {
   font-size: 0;
 }
-.one:after {
-  content: "Хуже не бывает!";
-}
 
+.one:after {
+  content: "Хуже не бывает";
+}
 .two:after {
+  content: "Очень плохо";
+}
+.three:after {
   content: "Плохо";
+}
+.four:after {
+  content: "Ниже среднего";
+}
+.five:after {
+  content: "Средне";
+}
+.six:after {
+  content: "Выше среднего";
+}
+.seven:after {
+  content: "Нормально";
+}
+.eight:after {
+  content: "Хорошо";
+}
+.nine:after {
+  content: "Отлично";
+}
+.ten:after {
+  content: "Лучше не бывает!";
 }
 
 .one:after,
 .two:after,
-.three:after {
+.three:after,
+.four:after,
+.five:after,
+.six:after,
+.seven:after,
+.eight:after,
+.nine:after,
+.ten:after {
   position: relative;
   top: 0;
   left: 0;
@@ -170,6 +218,141 @@ html {
 
   color: black;
 }
+
 /*---------------------*\
-      
+    availability
 \*---------------------*/
+
+.availability {
+  width: 120px;
+  height: 30px;
+
+  color: #6ebc63;
+}
+
+.availability .sign {
+  top: 50%;
+  left: 0;
+
+  font-weight: bolder;
+}
+
+.availability .text {
+  top: 55%;
+  left: 25px;
+}
+
+.availability .sign,
+.availability .text {
+  position: absolute;
+  transform: translate(0, -50%);
+}
+
+/*---------------------*\
+      share-book
+\*---------------------*/
+
+.share-book {
+  width: 120px;
+  height: 30px;
+
+  color: #3d70b2;
+}
+
+.share-book .text {
+  position: absolute;
+  top: 50%;
+
+  display: block;
+
+  transform: translate(0, -50%);
+}
+
+.share-book .text:after {
+  content: "\f064";
+  font-family: FontAwesome;
+
+  position: absolute;
+  left: -25px;
+  top: 50%;
+
+  transform: translate(0, -50%);
+}
+
+/*---------------------*\
+      to-wish-list
+\*---------------------*/
+
+.to-wish-list {
+  width: 150px;
+  height: 30px;
+
+  color: #3d70b2;
+}
+
+.to-wish-list:hover .text:before {
+  content: "\f02e";
+  font-family: FontAwesome;
+
+  position: absolute;
+  left: -25px;
+  top: 50%;
+
+  color: gray;
+
+  transform: translate(0, -50%);
+}
+
+.to-wish-list .text {
+  position: absolute;
+  top: 50%;
+
+  display: block;
+
+  transform: translate(0, -50%);
+}
+
+.to-wish-list .text:before {
+  content: "\f097";
+  font-family: FontAwesome;
+
+  position: absolute;
+  left: -25px;
+  top: 50%;
+
+  color: #3d70b2;
+
+  transform: translate(0, -50%);
+}
+
+/*********************************
+	     preview-inforamtion
+**********************************/
+
+.preview-inforamtion {
+  width: inherit;
+  height: 200px;
+
+  padding: 10px;
+}
+
+/*---------------------*\
+     price-book
+\*---------------------*/
+
+.preview-inforamtion .price-book {
+  width: inherit;
+  height: 40px;
+}
+
+.preview-inforamtion .current-price {
+}
+
+.preview-inforamtion .discount {
+}
+
+.preview-inforamtion .old-price {
+}
+
+.preview-inforamtion .purchase-total {
+}

@@ -664,7 +664,7 @@ input[type="radio"] {
 
 .news-block2 .slider-dots {
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   left: 50%;
 
   display: flex;
@@ -673,9 +673,15 @@ input[type="radio"] {
   width: 100px;
   height: 30px;
 
-  /* background: rgb(255, 0, 0); */
+  opacity: 0;
 
   transform: translate(-50%, 0);
+  transition-duration: 0.4s;
+}
+.slider:hover .slider-dots {
+  bottom: 10px;
+
+  opacity: 1;
 }
 
 .slider-dots span {
@@ -706,8 +712,8 @@ input[type="radio"] {
 
 .slider-dots .active .inside-dots-item {
   position: absolute;
-  top: 47%;
-  left: 55%;
+  top: 50%;
+  left: 50%;
 
   border-radius: 50%;
 
@@ -715,10 +721,12 @@ input[type="radio"] {
   animation-name: inside-dot-scale;
   animation-timing-function: ease-out;
   animation-iteration-count: 1;
-  animation-duration: 1s;
+  animation-duration: 0.3s;
   animation-fill-mode: forwards;
 }
-
+.news-block2 .slider .item {
+  display: none;
+}
 @keyframes inside-dot-scale {
   from {
   }

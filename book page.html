@@ -254,15 +254,26 @@
     </header>
     <!-- /HEADER  -->
 
+    <!-- MAIN-BODY -->
     <div class="main-body">
       <div class="main-info">
         <div class="main-info__container">
           <div class="left-column-pucture">
-            <img class = "book-image" src="image/Book Page/picture1.webp" alt=""/>
+            <img
+              class="book-image"
+              src="image/Book Page/picture1.webp"
+              alt=""
+            />
           </div>
+          <!-- RIGHT-COLUMN-INFORMATION -->
           <div class="right-column-information">
-            <span class="book-title"> Думай как математик: Как решать любые задачи быстрее и эффективнее</span>
+            <span class="book-title">
+              Думай как математик: Как решать любые задачи быстрее и
+              эффективнее</span
+            >
+            <!-- DETAIL-INFORMATION -->
             <div class="detail-information">
+              <!-- RAITING BLOCK -->
               <div class="rating-block">
                 <div class="rating-left">
                   <div class="rating-left-title">Рейтинг</div>
@@ -271,27 +282,102 @@
                 <div class="rating-right">
                   <div class="rating-right-title">Оценить (оценило: 19)</div>
                   <div class="rating-right-user-rate">
-                    <span class="star" onmouseover="printStars(1)" onmouseout="doEmptyStar(1)"></span>
-                    <span class="star" onmouseover="printStars(2)" onmouseout="doEmptyStar(2)"></span>
-                    <span class="star" onmouseover="printStars(3)" onmouseout="doEmptyStar(3)"></span>
-                    <span class="star" onmouseover="printStars(4)" onmouseout="doEmptyStar(4)"></span>
-                    <span class="star" onmouseover="printStars(5)" onmouseout="doEmptyStar(5)"></span>
-                    <span class="star" onmouseover="printStars(6)" onmouseout="doEmptyStar(6)"></span>
-                    <span class="star" onmouseover="printStars(7)" onmouseout="doEmptyStar(7)"></span>
-                    <span class="star" onmouseover="printStars(8)" onmouseout="doEmptyStar(8)"></span>
-                    <span class="star" onmouseover="printStars(9)" onmouseout="doEmptyStar(9)"></span>
-                    <span class="star" onmouseover="printStars(10)" onmouseout="doEmptyStar(10)"></span>
-                    
+                    <span
+                      class="star"
+                      onmouseover="printStars(1)"
+                      onmouseout="doEmptyStar(1)"
+                      onclick="userClickedOnRating(1)"
+                    ></span>
+                    <span
+                      class="star"
+                      onmouseover="printStars(2)"
+                      onmouseout="doEmptyStar(2)"
+                      onclick="userClickedOnRating(2)"
+                    ></span>
+                    <span
+                      class="star"
+                      onmouseover="printStars(3)"
+                      onmouseout="doEmptyStar(3)"
+                      onclick="userClickedOnRating(3)"
+                    ></span>
+                    <span
+                      class="star"
+                      onmouseover="printStars(4)"
+                      onmouseout="doEmptyStar(4)"
+                      onclick="userClickedOnRating(4)"
+                    ></span>
+                    <span
+                      class="star"
+                      onmouseover="printStars(5)"
+                      onmouseout="doEmptyStar(5)"
+                      onclick="userClickedOnRating(5)"
+                    ></span>
+                    <span
+                      class="star"
+                      onmouseover="printStars(6)"
+                      onmouseout="doEmptyStar(6)"
+                      onclick="userClickedOnRating(6)"
+                    ></span>
+                    <span
+                      class="star"
+                      onmouseover="printStars(7)"
+                      onmouseout="doEmptyStar(7)"
+                      onclick="userClickedOnRating(7)"
+                    ></span>
+                    <span
+                      class="star"
+                      onmouseover="printStars(8)"
+                      onmouseout="doEmptyStar(8)"
+                      onclick="userClickedOnRating(8)"
+                    ></span>
+                    <span
+                      class="star"
+                      onmouseover="printStars(9)"
+                      onmouseout="doEmptyStar(9)"
+                      onclick="userClickedOnRating(9)"
+                    ></span>
+                    <span
+                      class="star"
+                      onmouseover="printStars(10)"
+                      onmouseout="doEmptyStar(10)"
+                      onclick="userClickedOnRating(10)"
+                    ></span>
                   </div>
-
-                  
                 </div>
               </div>
+              <!-- /RAITING BLOCK -->
+              <div class="availability">
+                <div class="sign">&#10004;</div>
+                <div class="text">В наличии</div>
+              </div>
+              <div class="share-book">
+                <a class="text" href="#">Поделиться</a>
+              </div>
+              <div class="to-wish-list">
+                <a class="text" href="#">Отложить в избранное</a>
+              </div>
+          
             </div>
+            <!-- /DETAIL-INFORMATION -->
+               <!-- PREVIEW-INFORMATION -->
+          <div class="preview-inforamtion">
+              <div class="price-book">
+                <div class="current-price"></div>
+                <div class="discount"></div>
+                <div class="old-price"></div>
+                <div class="purchas-total"></div>
+              </div>
+              <div class="add-to-cart"></div>
+              <div class="delivary"></div>
+            </div>
+            <!-- /PREVIEW-INFORMATION -->
           </div>
+          
+          <!-- /RIGHT-COLUMN-INFORMATION -->
         </div>
       </div>
     </div>
+    <!-- /MAIN-BODY -->
 
     <!-- FOOTER-->
     <footer>
@@ -365,6 +451,6 @@
       <!-- <div class="footer-down"></div> -->
     </footer>
     <!-- END FOOTER-->
-    <script src="js/starRating.js"> </script>
+    <script src="js/starRating.js"></script>
   </body>
 </html>
