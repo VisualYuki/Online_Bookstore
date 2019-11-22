@@ -13,7 +13,7 @@ html {
   width: inherit;
   height: 1000px;
   padding: 0 200px;
-  background: rgb(253, 246, 246);
+  /* background: rgb(253, 246, 246); */
 }
 
 /*============================================
@@ -79,10 +79,11 @@ html {
   justify-content: space-around;
   align-items: center;
 
-  font-size: 13px;
-
   width: inherit;
   height: 50px;
+  margin: 10px 0;
+
+  font-size: 13px;
 }
 
 /*---------------------*\
@@ -333,7 +334,9 @@ html {
   width: inherit;
   height: 200px;
 
-  padding: 10px;
+  padding: 20px;
+
+  background: #f2f9fa;
 }
 
 /*---------------------*\
@@ -341,18 +344,180 @@ html {
 \*---------------------*/
 
 .preview-inforamtion .price-book {
+  display: flex;
+  align-items: center;
+
   width: inherit;
   height: 40px;
 }
 
 .preview-inforamtion .current-price {
+  width: 70px;
+  height: 30px;
+  margin-top: 10px;
+
+  font-size: 20px;
+}
+
+.preview-inforamtion .current-price span {
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .preview-inforamtion .discount {
+  width: 100px;
+  height: 22px;
+  margin-left: 15px;
+
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+
+  background: #ff6564;
+  color: white;
+  border-radius: 4px;
 }
 
 .preview-inforamtion .old-price {
+  margin-left: 20px;
+
+  text-decoration-line: line-through;
+  text-decoration-style: solid;
+  text-decoration-color: currentColor;
+
+  color: #828282;
 }
 
 .preview-inforamtion .purchase-total {
+  position: absolute;
+  right: 10px;
+  font-size: 13px;
+}
+
+.preview-inforamtion .purchase-total:after {
+  content: "\f217";
+  font-family: FontAwesome;
+
+  position: absolute;
+  left: -20px;
+  top: 50%;
+
+  color: #828282;
+
+  transform: translate(0, -50%);
+}
+
+/*---------------------*\
+     
+\*---------------------*/
+
+.add-to-cart {
+  display: block;
+  width: 210px;
+  height: 40px;
+  margin-top: 15px;
+
+  text-align: center;
+  line-height: 40px;
+
+  background: #6ebc63;
+  color: white;
+  border-radius: 4px;
+}
+
+.delivary {
+  margin-top: 20px;
+}
+
+.delivary:after {
+  content: "\f0d1";
+}
+
+.issue-point {
+  margin-top: 10px;
+}
+.issue-point:after {
+  content: "\f1b2";
+}
+
+.issue-point:after,
+.delivary:after {
+  font-family: FontAwesome;
+
+  position: absolute;
+  left: -20px;
+  top: 50%;
+
+  color: #828282;
+
+  transform: translate(0, -50%);
+}
+
+.issue-point,
+.delivary {
+  margin-left: 20px;
+
+  font-size: 13px;
+
+  color: #242424;
+}
+
+/*********************************
+	     tab-switcher
+**********************************/
+
+.tab-switcher {
+  width: 831px;
+  height: 270px;
+}
+
+/*---------------------*\
+        tab-nav
+\*---------------------*/
+
+.tab-nav {
+  width: inherit;
+  height: 39px;
+  margin-top: 10px;
+}
+
+.link-character {
+}
+
+.link-payment {
+}
+
+.link-delivary {
+}
+
+.link-character,
+.link-payment,
+.link-delivary {
+  display: block;
+  float: left;
+  width: 277px;
+  height: 39px;
+
+  font-size: 14px;
+  text-align: center;
+  line-height: 39px;
+
+  background: rgb(247, 247, 247);
+  color: #242424;
+}
+
+/*---------------------*\
+        tab-list
+\*---------------------*/
+
+.tab-list {
+}
+
+.tab-item-character {
+}
+
+.tab-item-payment {
+}
+
+.tab-item-delivary {
 }

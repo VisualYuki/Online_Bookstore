@@ -4,7 +4,7 @@
 
 .main-page {
   width: 100%;
-  height: 1500px;
+  height: 2000px;
 
   /* background: rgb(211, 211, 211); */
 }
@@ -598,6 +598,8 @@ input[type="radio"] {
 .slider {
   height: 460px;
   width: 460px;
+
+  cursor: pointer;
 }
 
 .slider img {
@@ -613,7 +615,7 @@ input[type="radio"] {
   text-align: center;
   line-height: 460px;
 
-  cursor: pointer;
+  /* cursor: pointer; */
   user-select: none;
 }
 
