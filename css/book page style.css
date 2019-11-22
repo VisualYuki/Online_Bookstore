@@ -424,6 +424,9 @@ html {
   color: white;
   border-radius: 4px;
 }
+.add-to-cart:hover {
+  background-color: rgb(90, 156, 81);
+}
 
 .delivary {
   margin-top: 20px;
@@ -469,6 +472,11 @@ html {
 .tab-switcher {
   width: 831px;
   height: 270px;
+  margin-top: 10px;
+
+  font-family: "Open Sans", "Segoe UI", sans-serif, Arial !important;
+  color: #242424;
+  font-size: 14px;
 }
 
 /*---------------------*\
@@ -476,18 +484,25 @@ html {
 \*---------------------*/
 
 .tab-nav {
-  width: inherit;
-  height: 39px;
-  margin-top: 10px;
+  width: 829;
+  height: 40px;
+  border: rgb(235, 235, 235) solid 1px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 .link-character {
+  border-top-left-radius: 4px;
 }
 
 .link-payment {
+  border-left: rgb(235, 235, 235) solid 1px;
+  border-right: rgb(235, 235, 235) solid 1px;
 }
 
 .link-delivary {
+  border-top-right-radius: 4px;
+  width: 277px !important;
 }
 
 .link-character,
@@ -495,15 +510,17 @@ html {
 .link-delivary {
   display: block;
   float: left;
-  width: 277px;
+  width: 276px;
   height: 39px;
 
-  font-size: 14px;
   text-align: center;
   line-height: 39px;
 
   background: rgb(247, 247, 247);
+  border-bottom: rgb(235, 235, 235) solid 1px;
   color: #242424;
+
+  cursor: pointer;
 }
 
 /*---------------------*\
@@ -511,13 +528,59 @@ html {
 \*---------------------*/
 
 .tab-list {
+  width: inherit;
 }
 
 .tab-item-character {
+  height: 230px;
+  padding-left: 87px;
+
+  columns: 2 auto;
+}
+
+.tab-item-character .tab-item-inside {
+  width: 400px;
+  height: auto;
+
+  margin: 15px 0 15px;
+}
+
+.tab-item-character .tab-item-inside a {
+  text-decoration: rgb(61, 112, 178) solid underline;
+  color: rgb(61, 112, 178);
+  /* text-decoration: initial;
+  color: initial; */
 }
 
 .tab-item-payment {
+  height: 370px;
 }
 
+.tab-item-payment .title {
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.tab-item-payment .title-inside {
+  margin: 20px 0 20px;
+
+  font-weight: bolder;
+}
+.after-title {
+  margin-top: -20px;
+}
 .tab-item-delivary {
+}
+
+.tab-item-payment,
+.tab-item-delivary,
+.tab-item-character {
+  width: inherit;
+  padding: 20px;
+
+  border-right: 1px solid rgb(235, 235, 235);
+  border-left: 1px solid rgb(235, 235, 235);
+  border-bottom: 1px solid rgb(235, 235, 235);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
