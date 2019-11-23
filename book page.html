@@ -380,12 +380,12 @@
             <!-- TAB-SWITHCER -->
             <div class="tab-switcher">
               <div class="tab-nav">
-                <div class="link-character">Характеристики</div>
-                <div class="link-payment">Оплата</div>
-                <div class="link-delivary">Доставка</div>
+                <div class="link-character  active-link" onclick="showTabItem(0)">Характеристики</div>
+                <div class="link-payment" onclick="showTabItem(1)">Оплата</div>
+                <div class="link-delivary" onclick="showTabItem(2)">Доставка</div>
               </div>
-              <div class="tab-list">
-                <div class="tab-item-character">
+              <div class="tab-list" >
+                <div class="tab-item-character" >
                   <div class="tab-item-inside">Автор: Оакли Б.</div>
                   <div class="tab-item-inside">
                     Серия: <a href="#">Личная эффективность</a>,
@@ -406,22 +406,46 @@
                   <div class="tab-item-inside">Вес:0.59 кг</div>
                 </div>
 
-                <div class="tab-item-payment">
-                  <p class = "title">Способы оплаты</p>
+                <div class="tab-item-payment ">
+                  <p class="title">Способы оплаты</p>
                   <p class="title-inside">При получении</p>
-                  <p class = "after-title">
+                  <p class="after-title">
                     Оплата производится в момент получения заказа. Наличными или
                     картой.
                   </p>
                   <p class="title-inside">Наложенный платеж</p>
-                  <p class = "after-title">доставка почтой России</p>
+                  <p class="after-title">доставка почтой России</p>
                   <p class="title-inside">Банковской картой на сайте</p>
-                  <p class = "after-title">Visa, MasterCard, Maestro, МИР</p>
+                  <p class="after-title">Visa, MasterCard, Maestro, МИР</p>
                   <p class="title-inside">QIWI-кошелёк</p>
                   <p class="title-inside">Яндекс.Деньги</p>
                   <p class="title-inside">Банковский перевод</p>
                 </div>
-                <div class="tab-item-delivary"></div>
+
+                <div class="tab-item-delivary ">
+                  <table class="table-delivary">
+                    <caption>
+                      Как получить:
+                    </caption>
+                    <tr>
+                      <td>Курьер</td>
+                      <td>от 280 р.</td>
+                    </tr>
+                    <tr>
+                      <td>Пункты выдачи партнеров</td>
+                      <td>от 157 р.</td>
+                    </tr>
+                    <tr>
+                      <td>Почта России</td>
+                      <td>от 341 р.</td>
+                    </tr>
+                  </table>
+
+                  <p class="table-note">
+                    Точная стоимость доставки будет рассчитана при оформлении
+                    заказа
+                  </p>
+                </div>
               </div>
             </div>
             <!-- /TAB-SWITHCER -->
@@ -506,5 +530,6 @@
     </footer>
     <!-- END FOOTER-->
     <script src="js/starRating.js"></script>
+    <script src="js/tab-box.js"></script>
   </body>
 </html>
