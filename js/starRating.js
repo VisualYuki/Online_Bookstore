@@ -5,8 +5,6 @@ let userClickedRating = false;
 let userStarNum = (lastIndexTitle = 0);
 const starTotal = 10;
 
-printStars(9);
-
 function printStars(starNum) {
   let starBlocks = document.getElementsByClassName("star");
 
