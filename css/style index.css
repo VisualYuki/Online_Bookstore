@@ -763,7 +763,9 @@ input[type="radio"] {
   height: 460px;
   width: 850px;
 }
-
+.small-right-banner a {
+  display: block;
+}
 .small-right-banner .container {
 }
 
@@ -773,7 +775,7 @@ input[type="radio"] {
 
 .up-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 260px;
 
   text-align: center;
@@ -878,5 +880,61 @@ input[type="radio"] {
 \*---------------------*/
 
 .down-container {
+  width: inherit;
+  height: 180px;
+  margin-top: 20px;
+  padding: 10px;
+
+  background-image: linear-gradient(
+    rgba(255, 241, 0, 0.1) 0px,
+    rgba(255, 241, 0, 0)
+  );
+
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 2px;
+
+  color: #595959;
+  overflow: hidden;
+}
+
+.small-right-banner .down-container .title {
+  margin-bottom: 5px;
+}
+
+.small-right-banner .down-container .subtitle {
+  margin-bottom: 10px;
+}
+
+.small-right-banner .down-container .subtitle:hover {
+  text-decoration: underline solid black;
+}
+
+.small-right-banner .down-container .pictures {
+  width: inherit;
   height: 200px;
+  margin-top: 30px;
+}
+
+.small-right-banner .down-container .pictures a {
+  display: inline-block;
+  width: 160px;
+  height: 120px;
+}
+
+.small-right-banner .down-container .pictures img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  width: 80px;
+  height: 120px;
+
+  transform: translate(-50%, 0);
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+.small-right-banner .down-container .pictures a:hover img {
+  top: -25px;
 }
