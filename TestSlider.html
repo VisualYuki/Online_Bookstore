@@ -144,6 +144,12 @@
           _items.push({ item: item, position: index, transform: 0 });
         });
 
+        _sliderWrapper.style.transform =
+          "background: #" +
+          Math.random(0, 9) +
+          Math.random(0, 9) +
+          Math.random(0, 9);
+
         var position = {
           getItemMin: function() {
             var indexItem = 0;

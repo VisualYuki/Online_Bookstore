@@ -316,6 +316,40 @@ input[type="radio"] {
 }
 
 /*---------------------*\
+    large-item-slider
+\*---------------------*/
+
+.large-item-slider {
+  width: inherit;
+  height: 150px;
+
+  border: black solid 2px;
+  box-sizing: content-box;
+}
+
+.slider__wrapper {
+  display: flex;
+
+  overflow: hidden;
+}
+
+.slider__item {
+  flex: 0 0 20%;
+
+  height: 150px;
+
+  font-size: 40px;
+  text-align: center;
+  line-height: 150px;
+}
+
+.slider__control {
+}
+
+.slider__control_left {
+}
+
+/*---------------------*\
         BOOK
 \*---------------------*/
 
