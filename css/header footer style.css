@@ -35,6 +35,7 @@
 /*============================================
         GENERAL
 =============================================*/
+
 html {
   box-sizing: border-box;
 }
@@ -58,6 +59,10 @@ body {
   font-family: DisplayPro, Arial, sans-serif;
 
   color: rgb(0, 26, 52);
+}
+
+*::selection {
+  background: #dcdfe2 !important;
 }
 
 .header {
@@ -315,9 +320,9 @@ li {
   cursor: pointer;
 }
 
-.personal-list > li:hover {
+/* .personal-list > li:hover {
   transform: translate(0, -3px);
-}
+} */
 
 .personal-list > li:hover,
 .personal-list > li:hover a {
@@ -360,7 +365,7 @@ li {
 .messages:after {
   position: absolute;
   left: 50%;
-  top: 5px;
+  top: 15px;
 
   display: block;
 

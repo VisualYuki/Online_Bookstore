@@ -597,10 +597,155 @@ input[type="radio"] {
 
 .news-block2 {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 30px 0;
 }
 
+/*---------------------*\
+    today-discount
+\*---------------------*/
+
+.today-discount {
+  /* position: absolute;
+  top: 0;
+  left: 5px; */
+
+  width: 250px;
+  height: auto;
+  /* background: #000; */
+
+  font-family: PTSansCaption, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: PTSansCaption;
+  src: url("../fonts/PTSansCaption.ttf");
+}
+
+.to-you-present {
+  height: 24px;
+  margin-bottom: 10px;
+
+  line-height: 24px;
+  font-size: 16px;
+  letter-spacing: 2.39px;
+  white-space: nowrap;
+
+  color: #0650c2;
+  background-image: url("../image/TodayDiscount/blue-present.png");
+  background-repeat: no-repeat;
+  background-position: 80% center;
+
+  text-transform: uppercase;
+}
+
+.detail-present {
+  width: 200px;
+  margin-bottom: 10px;
+
+  font-size: 16px;
+
+  color: #595959;
+}
+
+.detail-present span {
+  color: #0650c2;
+}
+
+.present-email {
+  width: 200px;
+  height: 38px;
+
+  border: none;
+  border-bottom: 1px solid rgb(184, 184, 184);
+}
+
+.present-email::placeholder {
+  font-weight: normal;
+  font-size: 18px;
+
+  color: rgb(184, 184, 184);
+}
+
+.present-email:focus {
+  outline: none;
+}
+
+.enter-email {
+  color: #999999;
+  font-size: 16px;
+}
+
+.discount-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+
+  color: #808080;
+}
+
+.get-discount-button {
+  width: 180px;
+  height: 40px;
+  margin-top: 15px;
+
+  font-size: 17px;
+  text-align: center;
+  line-height: 40px;
+
+  color: #6a96db;
+  border-radius: 3px;
+  border: solid 1px #6a96db;
+
+  cursor: default;
+}
+
+.discount-today-list {
+  margin-top: 30px;
+}
+
+.discount-title {
+  margin-bottom: 10px;
+}
+
+.action-block {
+  width: inherit;
+  height: 60px;
+  padding: 10px;
+
+  color: #000000;
+
+  border-top: rgb(235, 235, 235) solid 1px;
+}
+
+.text-block {
+  font-size: 15px;
+}
+.text-block span {
+  font-size: 13px;
+
+  color: #808080;
+}
+
+.action-block:hover {
+  background: #ebebeb;
+}
+
+.persent-circle-discount {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+
+  text-align: center;
+  line-height: 35px;
+
+  border-radius: 50%;
+  border: black 2px solid;
+
+  transform: translate(0, -50%);
+}
 /*---------------------*\
         slider
 \*---------------------*/
@@ -761,7 +906,7 @@ input[type="radio"] {
 
 .small-right-banner {
   height: 460px;
-  width: 850px;
+  width: 770px;
 }
 .small-right-banner a {
   display: block;
