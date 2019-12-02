@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Адаптивный шаблон</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        color: #333;
+        background: url(images/body.png) 0px 0px repeat;
+        font-family: "Segoe UI", "HelveticaNeue-Light", "Helvetica Neue Light",
+          "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 0.94em;
+        line-height: 135%;
+      }
+
+      h1 {
+        font-size: 30px;
+        font-weight: normal;
+        padding: 0px 0 0px;
+        line-height: 100%;
+        font-style: italic;
+      }
+
+      a {
+        color: #cd5252;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #963c3c;
+        text-decoration: none;
+      }
+
+      /* -------------------------------
+       Структура
+       ----------------------------------*/
+
+      /* -------------------------------
+       Ширина сайта в 1000px
+       ----------------------------------*/
+
+      #wrapper {
+        margin-top: 40px;
+        border: 0px solid #000;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        height: auto !important;
+      }
+
+      /* -------------------------------
+       Шапка сайта
+       ----------------------------------*/
+
+      #headerInner {
+        border: 0px solid #000;
+        background: #d04942;
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        height: 100px;
+        margin: 0 auto;
+        margin-top: 0px;
+      }
+
+      .text {
+        margin: 15px;
+      }
+
+      /* -------------------------------
+       Главный контент
+       ----------------------------------*/
+
+      #content #colLeft {
+        border: 0px solid #000;
+        float: left;
+        width: 65%;
+        margin-right: 0px;
+        background: #85c9cf;
+      }
+
+      /* -------------------------------
+       Сайтбар сайта
+       ----------------------------------*/
+
+      #content #colRight {
+        position: relative;
+        margin-left: 5px;
+        float: right;
+        width: 30%;
+        border: 0px solid #1fa2e1;
+        background: #7a9e0e;
+      }
+
+      #middle:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        height: 0;
+      }
+
+      /*----------------------------
+       Логотип
+       ------------------------------*/
+
+      .logo {
+        position: absolute;
+        left: 0px;
+        top: 40px;
+      }
+
+      .logo a {
+        margin-left: 30px;
+        font-size: 30px;
+        color: #96b551;
+      }
+
+      @media screen and (min-width: 100px) and (max-width: 1024px) {
+        /* размер блока, где находятся главный контент и сайтбар*/
+        body #wrapper {
+          margin-top: 40px;
+          width: 90%;
+          margin: 0 auto;
+        }
+
+        /* размер шапки сайта*/
+
+        body #headerInner {
+          width: 90%;
+          margin: 0 auto;
+        }
+
+        /* размер главного контента*/
+
+        #wrapper #content #colLeft {
+          width: 67%;
+        }
+
+        /* размер сайтбара*/
+
+        #wrapper #content #colRight {
+          margin-left: 3%;
+          width: 30%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="headerInner">
+      <div class="logo">
+        <a href="http://bifot.ru/blog/">Логотип</a>
+      </div>
+    </div>
+    <!-- начало wrapper -->
+    <div id="wrapper">
+      <div id="middle">
+        <div id="content">
+          <div id="colLeft">
+            <div class="text">
+              <h1>Основной контент</h1>
+              <p>Здесь будет находится основной контент страницы</p>
+            </div>
+          </div>
+          <!-- конец colLeft -->
+          <!-- начало colRight -->
+          <div id="colRight">
+            <div class="text">
+              <h1>Текст сайтбара</h1>
+              <p>Содержимое сайтбара</p>
+            </div>
+          </div>
+          <!-- конец colRight -->
+        </div>
+        <!-- конец content -->
+      </div>
+      <!-- конец middle -->
+    </div>
+    <!-- конец wrapper -->
+  </body>
+</html>

@@ -10,7 +10,9 @@
 }
 
 .main-page > div {
-  padding: 0 200px;
+  margin: 0 auto;
+  width: 1504px;
+  min-width: 1504px;
 }
 
 /*********************************
@@ -307,7 +309,7 @@ input[type="radio"] {
   position: relative;
 
   width: inherit;
-  height: 450px;
+  height: 850px;
   margin-top: 30px;
 
   font-family: "Open Sans", "Segoe UI", sans-serif, Arial;
@@ -632,7 +634,7 @@ input[type="radio"] {
 .news-block2 {
   display: flex;
   justify-content: space-between;
-  margin: 30px 0;
+  margin-top: 30px !important;
 }
 
 /*---------------------*\

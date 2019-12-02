@@ -140,15 +140,10 @@
           _step = (_itemWidth / _wrapperWidth) * 100, // величина шага (для трансформации)
           // наполнение массива _items
           _items = []; // массив элементов
+
         _sliderItems.forEach(function(item, index) {
           _items.push({ item: item, position: index, transform: 0 });
         });
-
-        _sliderWrapper.style.transform =
-          "background: #" +
-          Math.random(0, 9) +
-          Math.random(0, 9) +
-          Math.random(0, 9);
 
         var position = {
           getItemMin: function() {
