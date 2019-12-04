@@ -137,4 +137,5 @@ function multiItemSlider(selector, config) {
   _cycle(_config.direction);
 }
 
-multiItemSlider(".large-item-slider", { isCycle: true });
+multiItemSlider(".large-item-slider", { isCycle: false });
+multiItemSlider(".category-slider", { isCycle: false });
