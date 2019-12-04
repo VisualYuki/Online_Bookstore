@@ -9,17 +9,44 @@
 }
 
 .scroll-up {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 
-  display: fixed;
-  width: 60px !important;
-  min-width: 60px !important;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  width: 90px !important;
+  min-width: 90px !important;
   height: 100vh;
+
+  background: #dce2e856;
+  cursor: pointer;
 }
 
-.scroll-up:hover {
-  background: rgb(245, 247, 248);
+.scroll-up:after {
+  content: "\f077";
 }
+
+.arrow-down:after {
+  content: "\f078";
+}
+
+.scroll-up:after,
+.arrow-down:after {
+  font-family: FontAwesome;
+  color: #466a96;
+}
+
+.scroll-up:hover:after {
+  color: rgba(166, 181, 186);
+}
+
+/* .scroll-up:hover {
+  background: rgba(245, 247, 248, 0.534);
+} */
 
 .main-page > div {
   margin: 0 auto;
