@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      #brick {
+        width: 40px;
+        height: 20px;
+        background: #ee6b47;
+        position: relative;
+        cursor: pointer;
+      }
+
+      #path {
+        outline: 1px solid #e8c48e;
+        width: 540px;
+        height: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="path">
+      <div id="brick"></div>
+    </div>
+
+    <script>
+      function animate({ duration, draw, timing }) {
+        let start = performance.now();
+
+        requestAnimationFrame(function animate(time) {
+          let timeFraction = (time - start) / duration;
+          if (timeFraction > 1) timeFraction = 1;
+
+          let progress = timing(timeFraction);
+
+          draw(progress);
+
+          if (timeFraction < 1) {
+            requestAnimationFrame(animate);
+          }
+        });
+      }
+
+      brick.onclick = function() {
+        animate({
+          duration: 1000,
+          timing: function(timeFraction) {
+            return Math.pow(timeFraction, 5);
+          },
+          draw: function(progress) {
+            brick.style.left = progress * 500 + "px";
+          }
+        });
+      };
+    </script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      progress {
+        width: 5%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <progress id="elem"></progress>
+
+    <script>
+      function animate({ duration, draw, timing }) {
+        let start = performance.now();
+
+        requestAnimationFrame(function animate(time) {
+          let timeFraction = (time - start) / duration;
+          if (timeFraction > 1) timeFraction = 1;
+
+          let progress = timing(timeFraction);
+
+          draw(progress);
+
+          if (timeFraction < 1) {
+            requestAnimationFrame(animate);
+          }
+        });
+      }
+
+      elem.onclick = function() {
+        animate({
+          duration: 1000,
+          timing: function(timeFraction) {
+            return timeFraction;
+          },
+          draw: function(progress) {
+            elem.style.width = progress * 100 + "%";
+          }
+        });
+      };
+    </script>
+  </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #train {
+        position: relative;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img id="train" src="https://js.cx/clipart/train.gif" />
+
+    <script>
+      train.onclick = function() {
+        let start = Date.now();
+
+        let timer = setInterval(function() {
+          let timePassed = Date.now() - start;
+
+          train.style.left = timePassed / 5 + "px";
+
+          if (timePassed > 2000) clearInterval(timer);
+        }, 20);
+      };
+    </script>
+  </body>
+</html> -->

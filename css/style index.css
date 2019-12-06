@@ -340,9 +340,6 @@ input[type="radio"] {
 }
 
 .category-slider-item-anchor {
-}
-
-.category-slider-item-anchor {
   display: inline-block;
   width: 363px;
   height: 170px;
@@ -1078,8 +1075,6 @@ input[type="radio"] {
 .small-right-banner a {
   display: block;
 }
-.small-right-banner .container {
-}
 
 /*---------------------*\
       up-container
@@ -1182,9 +1177,6 @@ input[type="radio"] {
   height: 260px;
 
   border-radius: 4px;
-}
-
-.small-right-banner .up-container .right-banner {
 }
 
 /*---------------------*\
